@@ -34,6 +34,7 @@ nextButton.addEventListener('click', () => {
     setNextQuestion()
 })
 
+//add function to reset hidden buttons //
 
 //show question function  //
 function showQuestion(question) {
@@ -49,6 +50,10 @@ function showQuestion(question) {
         answerButtonElement.appendChild(button)
     })
 }
+
+//add function to add classes correct and wrong
+
+//add function to remove classes correct and wrong
 
 //select answers fucntion and score++//
 
