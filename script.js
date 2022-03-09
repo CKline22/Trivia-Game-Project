@@ -34,7 +34,13 @@ nextButton.addEventListener('click', () => {
     setNextQuestion()
 })
 
-//add function to reset hidden buttons //
+// function to reset hide buttons //
+function resetState() {
+    nextButton.classList.add('hide')
+    while (answerButtonElement.firstChild) {
+        answerButtonElement.removeChild (answerButtonElement.firstChild)
+    }
+}
 
 //show question function  //
 function showQuestion(question) {
@@ -51,10 +57,42 @@ function showQuestion(question) {
     })
 }
 
-//add function to add classes correct and wrong
-
-//add function to remove classes correct and wrong
-
 //select answers fucntion and score++//
+function selectAnswer(e) {
+    const selectedButton = e.target
+    const correct = selectedButton.dataset.correct
+    addStatusClass(document.body, correct)
+    Array.from(answerButtonElement.children).forEach(button => {
+        addStatusClass(button, button.dataset.correct)
+    })
+    if(shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide')
+    } else {
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide')
+    }
+    if(correct) {
+        score++
+        scoreElement.innerText = "Score: " + score
+        console.log("wrong?")
+    }
+}
 
+//add function to add classes correct and wrong
+function addStatusClass(element, correct) {
+    clearStatusClass(element)
+    if(correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
+}
+//add function to remove classes correct and wrong
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+}
 //questions array//
+const question = [
+    
+]
