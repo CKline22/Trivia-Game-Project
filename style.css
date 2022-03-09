@@ -42,14 +42,37 @@ header {
     outline: none;
 }
 
+.button.hover {
+    border-color:black;
+}
 
+/* controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* add controls */
+/* score */
+#score {
+    background-color: gray;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+}
 
-/* add score */
+/* hide class */
+.hide {
+    display: none;
+}
 
-/* add hide class */
+/* correct */
+.button.correct {
+    background-color: green;
+}
 
-/* add correct */
-
-/* add wrong */
+/* wrong */
+.button.wrong {
+    background-color: red;
+}
