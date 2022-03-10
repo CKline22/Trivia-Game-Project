@@ -94,5 +94,58 @@ function clearStatusClass(element) {
 }
 //questions array//
 const question = [
-    
+    {
+        question: 'What is 2 + 2?',
+        answers: [
+            {text: '4', correct: true},
+            {text: '22', correct: false},
+            {text: '9', correct: false},
+            {text: '11', correct: false}
+        ]
+    },
+    {
+        question: 'What is 4 + 4?',
+        answers: [
+            {text: '7', correct: false},
+            {text: '6', correct: false},
+            {text: '8', correct: true},
+            {text: '11', correct: false}
+        ]
+    },
+    {
+        question: 'What is 1 + 2?',
+        answers: [
+            {text: '5', correct: false},
+            {text: '3', correct: true},
+            {text: '9', correct: false},
+            {text: '11', correct: false}
+        ]
+    },
+    {
+        question: 'What is 4 + 6?',
+        answers: [
+            {text: '10', correct: true},
+            {text: '6', correct: false},
+            {text: '9', correct: false},
+            {text: '11', correct: false}
+        ]
+    },
+    {
+        question: 'What is 10 + 2?',
+        answers: [
+            {text: '10', correct: false},
+            {text: '6', correct: false},
+            {text: '9', correct: false},
+            {text: '12', correct: true}
+        ]
+    },
+    {
+        question: 'What is 6 + 6?',
+        answers: [
+            {text: '10', correct: false},
+            {text: '12', correct: true},
+            {text: '3', correct: false},
+            {text: '15', correct: false}
+        ]
+    }
 ]
