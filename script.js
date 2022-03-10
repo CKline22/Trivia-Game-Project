@@ -21,20 +21,20 @@ function startGame() {
     setNextQuestion()
 }
 
-//next question function//
+//next question function //
 function setNextQuestion(){
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-//event listners for buttons
+//event listners for buttons starts game and changes questions
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
 
-// function to reset hide buttons //
+// function to reset buttons with hide class //
 function resetState() {
     nextButton.classList.add('hide')
     while (answerButtonElement.firstChild) {
@@ -74,7 +74,7 @@ function selectAnswer(e) {
     if(correct) {
         score++
         scoreElement.innerText = "Score: " + score
-        console.log("wrong?")
+        console.log("score + 1")
     }
 }
 
